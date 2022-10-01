@@ -4,24 +4,74 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
   </head>
   <body>
     <div class="container">
-      <h1>Weather App</h1>
+      <div class="weather-container">
+        <form>
+          <div class="row">
+            <div class="col-7">
+              <input
+                class="search-style form-control"
+                type="text"
+                placeholder="Enter the city"
+                autocomplete="off"
+                autofocus="on"
+              />
+            </div>
+            <div class="col-5 button-block">
+              <input type="submit" value="Search" class="btn btn-primary" />
+              <button class="btn btn-success">Current Location</button>
+            </div>
+          </div>
+        </form>
+        <div class="weather-summary">
+          <div class="weather-header">
+            <h1 id="city"></h1>
+            <div class="header-style" id="current-data">Wednesday, 13:20</div>
+            <div class="header-style" id="description"></div>
+          </div>
+          <div class="weather-details">
+            <div class="row">
+              <div class="d-flex col-7">
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                  alt="Weather icon"
+                />
+                <div class="d-flex current-weather" id="temperature"></div>
+                <div class="d-flex units">°C | °F</div>
+              </div>
+              <div class="col-5 details">
+                <div>Feels like: <span id="feels-temp"></span>°C|°F</div>
+                <div>Humidity: <span id="humidity"></span>%</div>
+                <div>Wind: <span id="wind"></span>mph</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <small>
+        <a
+          href="https://github.com/Berryluxoo/vanilla-weather-app/blob/main/index.html"
+          target="_blank"
+          >Open-source code</a
+        >, by Lina Burkalo
+      </small>
     </div>
-    <script src="src/index.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
       crossorigin="anonymous"
     ></script>
+    <script src="src/index.js"></script>
   </body>
 </html>
