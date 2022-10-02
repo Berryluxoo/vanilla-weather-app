@@ -85,3 +85,16 @@ body {
 .button-block {
   padding-left: 0;
 }
+
+.weather-details .active {
+  color: black;
+  cursor: default;
+}
+
+.units a {
+  text-decoration: none;
+}
+
+.weather-details .active :hover {
+  text-decoration: none;
+}
